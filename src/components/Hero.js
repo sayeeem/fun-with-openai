@@ -3,7 +3,7 @@ import React from "react";
 function Hero() {
   return (
     <div className="bg-shopify-hero-green py-10 xl:pt-0 flex flex-col lg:flex-row">
-      <div className="flex-1 pl-8 px-8 lg:pr-0 flex flex-col justify-center">
+      <div className="flex-1 px-8 lg:pl-24 lg:pr-0 flex flex-col justify-center">
         <div className="flex flex-col gap-10">
           <h1 className="font-black text-5xl text-center lg:text-left">
             Fun with GPT-3
