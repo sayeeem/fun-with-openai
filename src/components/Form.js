@@ -64,7 +64,7 @@ function Form({
               className="inline-block align-baseline font-bold text-sm text-emerald-700 underline hover:text-emerald-900 hover:no-underline"
               type="button"
               onClick={() =>
-                presetButton("Write a poem about dinosaurs in the snow")
+                presetButton("Are there more doors or wheels?")
               }
             >
               Preset 1
@@ -80,7 +80,7 @@ function Form({
               className="inline-block align-baseline font-bold text-sm text-emerald-700 underline hover:text-emerald-900 hover:no-underline"
               type="button"
               onClick={() =>
-                presetButton("Write a tagline for an ice cream shop")
+                presetButton("Write a poem about dinosaurs in the snow")
               }
             >
               Preset 3

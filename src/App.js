@@ -90,8 +90,7 @@ function App() {
         className="flex-1 flex flex-col items-center gap-10 px-2 md:p-10 text-gray-800 bg-white"
       >
         <h1 className="max-w-5xl font-extrabold text-4xl">
-          Describe your brand in one word. Enter it into the shop name
-          generator.
+        Enter a prompt for a "human" response
         </h1>
         <Form
           isPending={isPending}
