@@ -84,29 +84,31 @@ function App() {
   return (
     <div className="App flex flex-col min-h-screen bg-emerald-900 lg:mx-10">
       <Header resetAttempts={resetAttempts} />
-      <Hero />
-      <div
-        ref={myRef}
-        className="flex-1 flex flex-col items-center gap-10 px-2 md:p-10 text-gray-800 bg-white"
-      >
-        <h1 className="max-w-5xl font-extrabold text-4xl">
-        Enter a prompt for a "human" response
-        </h1>
-        <Form
-          isPending={isPending}
-          textAreaText={textAreaText}
-          handleChange={handleChange}
-          presetButton={presetButton}
-          handleSubmit={handleSubmit}
-          attempts={attempts}
-        />
-        <h1 className="font-extrabold text-4xl">Responses</h1>
-        <div className="max-w-3xl w-full flex flex-col-reverse gap-4">
-          {cards?.map(({ id, prompt, promptResponse }) => (
-            <Card key={id} prompt={prompt} promptResponse={promptResponse} />
-          ))}
-        </div>
-      </div>
+      <main>
+        <Hero />
+        <section
+          ref={myRef}
+          className="flex-1 flex flex-col items-center gap-10 px-2 md:p-10 text-gray-800 bg-white"
+        >
+          <h1 className="max-w-5xl font-extrabold text-4xl">
+            Enter a prompt for a "human" response
+          </h1>
+          <Form
+            isPending={isPending}
+            textAreaText={textAreaText}
+            handleChange={handleChange}
+            presetButton={presetButton}
+            handleSubmit={handleSubmit}
+            attempts={attempts}
+          />
+          <h1 className="font-extrabold text-4xl">Responses</h1>
+          <div className="max-w-3xl w-full flex flex-col-reverse gap-4">
+            {cards?.map(({ id, prompt, promptResponse }) => (
+              <Card key={id} prompt={prompt} promptResponse={promptResponse} />
+            ))}
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
