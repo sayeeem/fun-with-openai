@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Card from "./components/Card";
+import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -109,6 +110,7 @@ function App() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
