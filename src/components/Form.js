@@ -37,6 +37,7 @@ function Form({
               placeholder="Write a tagline for an ice cream shop."
               value={textAreaText}
               onChange={handleChange}
+              required
             />
           </div>
           <div className="flex items-center justify-between gap-4">
@@ -63,9 +64,7 @@ function Form({
             <button
               className="inline-block align-baseline font-bold text-sm text-emerald-700 underline hover:text-emerald-900 hover:no-underline"
               type="button"
-              onClick={() =>
-                presetButton("Are there more doors or wheels?")
-              }
+              onClick={() => presetButton("Are there more doors or wheels?")}
             >
               Preset 1
             </button>

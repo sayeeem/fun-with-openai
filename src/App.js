@@ -89,7 +89,7 @@ function App() {
         <Hero />
         <section
           ref={myRef}
-          className="flex-1 flex flex-col items-center gap-10 px-2 md:p-10 text-gray-800 bg-white"
+          className="flex-1 flex flex-col items-center gap-10 px-2 py-6 md:p-10 text-gray-800 bg-white"
         >
           <h1 className="max-w-5xl font-extrabold text-4xl">
             Enter a prompt for a "human" response
@@ -104,6 +104,17 @@ function App() {
           />
           <h1 className="font-extrabold text-4xl">Responses</h1>
           <div className="max-w-3xl w-full flex flex-col-reverse gap-4">
+            {/* If there are no responses */}
+            {cards.length < 1 && (
+              <div className="flex flex-col gap-4 py-8 px-6 bg-gray-200">
+                <div className="flex items-center	justify-center">
+                  <p className="text-left text-gray-900 text-md font-bold">
+                    No responses yet...
+                  </p>
+                </div>
+              </div>
+            )}
+
             {cards?.map(({ id, prompt, promptResponse }) => (
               <Card key={id} prompt={prompt} promptResponse={promptResponse} />
             ))}
