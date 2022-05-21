@@ -23,6 +23,7 @@ function Header({ resetAttempts }) {
             href="https://sayeemahmed.netlify.app/"
             target="_blank"
             rel="noreferrer"
+            tabIndex={0}
           >
             Sayeem
           </a>

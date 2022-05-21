@@ -2,7 +2,7 @@ import React from "react";
 
 function Card({ prompt, promptResponse }) {
   return (
-    <div className="flex flex-col gap-4 py-8 px-6 bg-gray-200">
+    <div className="flex flex-col gap-4 py-8 px-6 bg-gray-200 rounded">
       <div className="flex">
         <p className="w-28 text-left text-gray-900 text-md font-bold">
           Prompt:

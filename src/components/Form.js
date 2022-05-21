@@ -9,10 +9,15 @@ function Form({
   return (
     <div className="w-full max-w-3xl border-b	border-solid border-gray-300">
       <form
-        className="bg-white rounded px-8 pt-6 pb-8 mb-16"
+        className="bg-white rounded px-8 pb-8 mb-16"
         onSubmit={handleSubmit}
       >
-        <fieldset className="disabled:opacity-40" disabled={!attempts}>
+        <fieldset className="disabled:cursor-not-allowed" disabled={!attempts}>
+          <legend className="w-100 mb-10">
+            <h1 className="max-w-5xl font-extrabold text-4xl">
+              Enter a prompt for a "human" response
+            </h1>
+          </legend>
           <div className="mb-4">
             <div className="flex justify-between">
               <label
@@ -31,7 +36,7 @@ function Form({
               </span>
             </div>
             <textarea
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-900 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-900 leading-tight focus:outline-none focus:shadow-outline disabled:cursor-not-allowed"
               id="prompt"
               rows={7}
               placeholder="Write a tagline for an ice cream shop."
@@ -44,7 +49,7 @@ function Form({
             {!isPending && (
               <button
                 disabled={!textAreaText}
-                className="bg-emerald-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline disabled:opacity-40 disabled:bg-emerald-700"
+                className="bg-emerald-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline disabled:cursor-not-allowed disabled:bg-emerald-700"
                 type="submit"
               >
                 Submit
@@ -53,7 +58,7 @@ function Form({
             {isPending && (
               <button
                 disabled
-                className="bg-emerald-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline disabled:opacity-40 disabled:bg-emerald-700"
+                className="bg-emerald-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline disabled:cursor-not-allowed disabled:bg-emerald-700"
                 type="submit"
               >
                 Submitting Prompt...
@@ -62,21 +67,21 @@ function Form({
 
             <span className="flex-1"></span>
             <button
-              className="inline-block align-baseline font-bold text-sm text-emerald-700 underline hover:text-emerald-900 hover:no-underline"
+              className="inline-block align-baseline font-bold text-sm text-emerald-700 underline hover:text-emerald-900 hover:no-underline disabled:cursor-not-allowed disabled:text-emerald-700 disabled:underline"
               type="button"
               onClick={() => presetButton("Are there more doors or wheels?")}
             >
               Preset 1
             </button>
             <button
-              className="inline-block align-baseline font-bold text-sm text-emerald-700 underline hover:text-emerald-900 hover:no-underline"
+              className="inline-block align-baseline font-bold text-sm text-emerald-700 underline hover:text-emerald-900 hover:no-underline disabled:cursor-not-allowed  disabled:text-emerald-700 disabled:underline"
               type="button"
               onClick={() => presetButton("Shopify is...")}
             >
               Preset 2
             </button>
             <button
-              className="inline-block align-baseline font-bold text-sm text-emerald-700 underline hover:text-emerald-900 hover:no-underline"
+              className="inline-block align-baseline font-bold text-sm text-emerald-700 underline hover:text-emerald-900 hover:no-underline disabled:cursor-not-allowed  disabled:text-emerald-700 disabled:underline"
               type="button"
               onClick={() =>
                 presetButton("Write a poem about dinosaurs in the snow")
